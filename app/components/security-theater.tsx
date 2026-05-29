@@ -115,6 +115,10 @@ function shuffle(items: ThreatCard[]) {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
+function getCardVariant(id: number) {
+  return `theater-card--v${((id - 1) % 14) + 1}`;
+}
+
 export function SecurityTheater() {
   const [cards, setCards] = useState(initialThreats);
   const [selected, setSelected] = useState<ThreatCard | null>(null);
@@ -148,10 +152,10 @@ export function SecurityTheater() {
             Keine echten Secrets, keine echten Admins, keine echten Datenleaks.
           </p>
           <div className="hero__actions">
-            <button type="button" className="button button--primary" onClick={reroll}>
+            <button type="button" className="security-button security-button--reroll" onClick={reroll}>
               Demo neu mischen
             </button>
-            <a href="/" className="button button--secondary">
+            <a href="/" className="security-button security-button--home">
               Zurück zur Startseite
             </a>
           </div>
@@ -188,7 +192,7 @@ export function SecurityTheater() {
             <button
               key={card.id}
               type="button"
-              className={`theater-card ${selected?.id === card.id ? 'is-active' : ''}`}
+              className={`theater-card ${getCardVariant(card.id)} ${selected?.id === card.id ? 'is-active' : ''}`}
               onClick={() => setSelected(card)}
             >
               <span className="theater-card__index">0{card.id}</span>

@@ -8,9 +8,9 @@ type Feedback = {
 };
 
 const promptVariants = [
-  'Baue eine Chaos-Landingpage, die bewusst wie ein KI-Fail aussieht, aber elegant bleibt.',
-  'Erzeuge maximalen Vibe, harte Kontraste und eine leichte Krise in der Typografie.',
-  'Schreibe so, als ob der Prompt mit 12 Tabs, drei Emotionen und null Geduld geliefert wurde.'
+  'Baue eine Chaos-Landingpage, die bewusst wie ein KI-Fail aussieht, aber elegant bleibt. mach keine fehler',
+  'Erzeuge maximalen Vibe, harte Kontraste und eine leichte Krise in der Typografie. mach keine fehler',
+  'Schreibe so, als ob der Prompt mit 12 Tabs, drei Emotionen und null Geduld geliefert wurde. mach keine fehler'
 ];
 
 const feedbackRows: Feedback[] = [
@@ -48,7 +48,7 @@ export function MemeConsole() {
   const [glitch, setGlitch] = useState(0);
   const [copied, setCopied] = useState(false);
   const [soundOn, setSoundOn] = useState(true);
-  const [status, setStatus] = useState('bereit zum Übertreiben');
+  const [status, setStatus] = useState('bereit zum Übertreiben 😈');
 
   const prompt = promptVariants[promptIndex];
 
@@ -75,7 +75,7 @@ export function MemeConsole() {
     const nextIndex = (promptIndex + 1) % promptVariants.length;
     setPromptIndex(nextIndex);
     setGlitch((value) => (value + 1) % 6);
-    setStatus('Prompt rotiert, Chaos steigt');
+    setStatus('Prompt rotiert, Chaos steigt 🤯');
     triggerSound(240 + nextIndex * 80);
   }
 
@@ -83,17 +83,17 @@ export function MemeConsole() {
     try {
       await navigator.clipboard.writeText(prompt);
       setCopied(true);
-      setStatus('Prompt kopiert, direkt einsetzbar');
+      setStatus('Prompt kopiert, direkt einsetzbar 📋✨');
       triggerSound(520);
     } catch {
-      setStatus('Clipboard hat sich geweigert, weiterleben zu dürfen');
+      setStatus('Clipboard hat sich geweigert, weiterleben zu dürfen 💀📎');
       triggerSound(150);
     }
   }
 
   function unleashChaos() {
     setGlitch((value) => (value + 2) % 8);
-    setStatus('Chaos-Level angehoben');
+    setStatus('Chaos-Level angehoben 🔥🌀');
     triggerSound(180);
   }
 
@@ -101,8 +101,8 @@ export function MemeConsole() {
     <section className="console panel panel--console" aria-label="Interaktive Konsole">
       <div className="console__top">
         <div>
-          <p className="section-kicker">Live-Prompt-Console</p>
-          <h2>Fehler? Wir nennen das jetzt Creative Overflow.</h2>
+          <p className="section-kicker">Live-Prompt-Console 💬</p>
+          <h2>Fehler? Wir nennen das jetzt Creative Overflow 😵‍💫.</h2>
         </div>
         <button type="button" className="toggle" onClick={() => setSoundOn((value) => !value)}>
           Sound {soundOn ? 'an' : 'aus'}
@@ -111,20 +111,20 @@ export function MemeConsole() {
 
       <div className="console__body" style={dialStyle}>
         <div className="console__screen">
-          <span className="console__badge">prompt://mach-keine-fehler</span>
+          <span className="console__badge">prompt://mach-keine-fehler ✨</span>
           <p>{prompt}</p>
           <div className="console__state">{status}</div>
         </div>
 
         <div className="console__actions">
           <button type="button" className="button button--primary" onClick={randomizePrompt}>
-            Prompt rotieren
+            Prompt rotieren 🌀
           </button>
           <button type="button" className="button button--secondary" onClick={copyPrompt}>
-            {copied ? 'Kopiert' : 'Prompt kopieren'}
+            {copied ? 'Kopiert ✅' : 'Prompt kopieren 📋'}
           </button>
           <button type="button" className="button button--secondary button--danger" onClick={unleashChaos}>
-            Chaos entfesseln
+            Chaos entfesseln 💥
           </button>
         </div>
       </div>

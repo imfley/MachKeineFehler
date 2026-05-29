@@ -197,6 +197,41 @@ export function ChaosEngine() {
     console.error(`[fake] ${pick(nextSeed + 2, consoleNoise)}`);
   }
 
+  function forceRootMode() {
+    const nextSeed = seed + 111;
+    setSeed(nextSeed);
+    setClickCount((value) => value + 1);
+    setIncident({
+      title: 'ROOT ACCESS SIMULATOR',
+      detail: 'Die Konsole behauptet jetzt, der Server sei komplett übernommen. Alles bleibt trotzdem visuell.'
+    });
+    setPopups((current) => [
+      ...current.slice(-1),
+      {
+        id: nextSeed + 41,
+        title: 'root escalation',
+        detail: 'Fake sudo granted. No real privileges were harmed.',
+        tone: '99%'
+      }
+    ]);
+    console.warn(`[warn] ${pick(nextSeed, consoleNoise)}`);
+  }
+
+  function floodPopups() {
+    const nextSeed = seed + 222;
+    setSeed(nextSeed);
+    setClickCount((value) => value + 1);
+    setPopups(
+      Array.from({ length: 4 }, (_, index) => ({
+        id: nextSeed + index * 7,
+        title: pick(nextSeed + index * 7, popupTitles),
+        detail: pick(nextSeed + index * 13, popupDetails),
+        tone: `${72 - index * 11}%`
+      }))
+    );
+    console.error(`[fake] ${pick(nextSeed + 5, consoleNoise)}`);
+  }
+
   return (
     <section className="chaos-engine panel panel--wide" aria-label="Chaos engine">
       <div className="chaos-engine__top">
@@ -212,10 +247,24 @@ export function ChaosEngine() {
       </div>
 
       <div className="chaos-engine__grid">
-        <button type="button" className="chaos-engine__panic" onClick={triggerIncident}>
-          <strong>Tap for fake 500</strong>
-          <span>Jeder Klick kann den komplett erfundenen Fehlerbildschirm auslösen.</span>
-        </button>
+        <div className="chaos-engine__control-stack">
+          <button type="button" className="chaos-engine__panic" onClick={triggerIncident}>
+            <strong>Tap for fake 500</strong>
+            <span>Jeder Klick kann den komplett erfundenen Fehlerbildschirm auslösen.</span>
+          </button>
+
+          <button type="button" className="chaos-engine__root-button" onClick={forceRootMode}>
+            <span>root escalation</span>
+            <strong>sudo vibes</strong>
+            <em>einmal klicken für maximalen Admin-Look</em>
+          </button>
+
+          <button type="button" className="chaos-engine__popup-button" onClick={floodPopups}>
+            <span>popup flood</span>
+            <strong>stack the overlays</strong>
+            <em>komplett übertrieben, komplett absichtlich</em>
+          </button>
+        </div>
 
         <div className="chaos-engine__panel chaos-engine__panel--shell" style={shellStyle}>
           <p className="section-kicker">Root Console</p>

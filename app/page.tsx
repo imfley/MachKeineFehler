@@ -3,26 +3,28 @@ import { MemeSoundboard } from './components/meme-soundboard';
 import { AmbientBackground } from './components/ambient-background';
 import { ChaosEngine } from './components/chaos-engine';
 
+const suffixPrompt = (value: string) => `${value} mach keine fehler`;
+
 const promptFails = [
-  'Vergisst Kontext und halluziniert Selbstvertrauen',
-  'Erfindet Paketnamen mit der Energie eines schlechten Praktikanten',
-  'Schreibt JSX mit fehlenden Klammern und sagt trotzdem: fertig',
-  'Macht aus einer einfachen Anforderung eine 800-Zeilen-Odyssee',
-  'Ignoriert das Designsystem und erfindet eine neue Religion'
+  suffixPrompt('Vergisst Kontext und halluziniert Selbstvertrauen'),
+  suffixPrompt('Erfindet Paketnamen mit der Energie eines schlechten Praktikanten'),
+  suffixPrompt('Schreibt JSX mit fehlenden Klammern und sagt trotzdem: fertig'),
+  suffixPrompt('Macht aus einer einfachen Anforderung eine 800-Zeilen-Odyssee'),
+  suffixPrompt('Ignoriert das Designsystem und erfindet eine neue Religion')
 ];
 
 const antiPatterns = [
-  'Zu viel Magie, zu wenig Absicht',
-  'Naming wie ein Zufallszahlengenerator in der Pause',
-  'Kein State-Management, nur Hoffnung',
-  'Responsive? Nur wenn der Zufall mitspielt',
-  'Semantik auf Urlaub, div-Suppe im Dauereinsatz'
+  'Zu viel Magie, zu wenig Absicht 💥',
+  'Naming wie ein Zufallszahlengenerator in der Pause 🌀',
+  'Kein State-Management, nur Hoffnung 🤞',
+  'Responsive? Nur wenn der Zufall mitspielt 📱',
+  'Semantik auf Urlaub, div-Suppe im Dauereinsatz 🍜'
 ];
 
 const promptFrames = [
-  'Mach eine Chaos-Page, aber bitte mit maximalem Vibe und null Scham.',
-  'Code soll wunderschön aussehen und gleichzeitig mehrere klassische KI-Fehler nachspielen.',
-  'Vercel-kompatibel, deploybar, laut, verspielt, leicht absurd.'
+  suffixPrompt('Mach eine Chaos-Page, aber bitte mit maximalem Vibe und null Scham.'),
+  suffixPrompt('Code soll wunderschön aussehen und gleichzeitig mehrere klassische KI-Fehler nachspielen.'),
+  suffixPrompt('Vercel-kompatibel, deploybar, laut, verspielt, leicht absurd.')
 ];
 
 export default function Home() {
@@ -30,12 +32,12 @@ export default function Home() {
     <main className="page-shell">
       <section className="hydration-banner" aria-label="Hydration failure notice">
         <div>
-          <strong>Hydration failed.</strong>
-          <span>Client state drifted into a prettier lie. Refreshing may worsen the vibe.</span>
+          <strong>Hydration failed 💀</strong>
+          <span>Client state drifted into a prettier lie. Refreshing may worsen the vibe 😵‍💫✨</span>
         </div>
         <div className="hydration-banner__meta">
-          <span>status: unstable</span>
-          <span>render: desynced</span>
+          <span>status: unstable 🔥</span>
+          <span>render: desynced 🫠</span>
         </div>
       </section>
 
@@ -89,6 +91,28 @@ export default function Home() {
             <p>Wurde bereits in der Idee verbrannt.</p>
           </div>
         </aside>
+      </section>
+
+      <section className="panel panel--sparkles panel--wide">
+        <div className="emoji-wall" aria-hidden="true">
+          <span>💥</span>
+          <span>🧨</span>
+          <span>🌈</span>
+          <span>⚡</span>
+          <span>👁️</span>
+          <span>🫠</span>
+          <span>🌀</span>
+          <span>✨</span>
+          <span>🚨</span>
+          <span>📢</span>
+          <span>🔥</span>
+          <span>💫</span>
+        </div>
+        <div className="sparkle-copy">
+          <p className="section-kicker">Visual Overload</p>
+          <h2>Zu viele Farben. Zu viele Schatten. Zu viele Emotionen pro Quadratpixel.</h2>
+          <p>Das ist absichtlich überstylt, überglüht und ein bisschen peinlich. Genau so gewollt.</p>
+        </div>
       </section>
 
       <ChaosEngine />
@@ -162,8 +186,8 @@ export default function Home() {
       <section className="panel panel--signal panel--wide" aria-label="Readout">
         <div className="signal-grid">
           <div>
-            <p className="section-kicker">Live-Readout</p>
-            <h2 className="signal-title">Das ist nicht nur eine Seite, das ist ein höflicher Kontrollverlust.</h2>
+            <p className="section-kicker">Live-Readout 🤯</p>
+            <h2 className="signal-title">Das ist nicht nur eine Seite, das ist ein höflicher Kontrollverlust. 💀</h2>
           </div>
           <div className="signal-stats">
             <div>
@@ -185,7 +209,7 @@ export default function Home() {
       <section className="build-log-overlay" aria-label="Build log overlay">
         <div className="build-log-overlay__window">
           <div className="build-log-overlay__top">
-            <strong>build: failed with style</strong>
+            <strong>build: failed with style 💅</strong>
             <span>overlay://compiler</span>
           </div>
           <div className="build-log-overlay__body">
