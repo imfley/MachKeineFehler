@@ -1,6 +1,7 @@
 import { MemeConsole } from './components/meme-console';
 import { MemeSoundboard } from './components/meme-soundboard';
 import { AmbientBackground } from './components/ambient-background';
+import { ChaosEngine } from './components/chaos-engine';
 
 const promptFails = [
   'Vergisst Kontext und halluziniert Selbstvertrauen',
@@ -89,6 +90,8 @@ export default function Home() {
           </div>
         </aside>
       </section>
+
+      <ChaosEngine />
 
       <MemeConsole />
       <MemeSoundboard />
