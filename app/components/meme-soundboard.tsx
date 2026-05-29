@@ -75,7 +75,7 @@ export function MemeSoundboard() {
   }
 
   return (
-    <section className="panel panel--soundboard" aria-label="Meme-Soundboard">
+    <section className="panel panel--soundboard" aria-label="Soundboard">
       <div className="soundboard__top">
         <div>
           <p className="section-kicker">Soundboard</p>

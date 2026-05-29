@@ -41,7 +41,7 @@ export default function OpenGraphImage() {
               color: 'rgba(247, 241, 232, 0.75)'
             }}
           >
-            Prompt-Alarm / Meme-First
+            Prompt-Alarm / Broken-By-Design
           </span>
         </div>
 
@@ -67,7 +67,7 @@ export default function OpenGraphImage() {
               maxWidth: '760px'
             }}
           >
-            Eine absichtlich überdrehte Meme-Page über KI-Fehler, Prompt-Chaos und maximalen Vibe.
+            Eine absichtlich überdrehte Chaos-Page über KI-Fehler, Prompt-Chaos und maximalen Vibe.
           </div>
         </div>
 

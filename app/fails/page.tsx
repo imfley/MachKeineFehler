@@ -4,7 +4,7 @@ import { FailLab } from '../components/fail-lab';
 
 export const metadata: Metadata = {
   title: 'Fehler Hall of Fame',
-  description: 'Die zweite Meme-Seite für die besten und schlimmsten KI-generierten Fehler.'
+  description: 'Die zweite Chaos-Seite für die besten und schlimmsten KI-generierten Fehler.'
 };
 
 export default function FailsPage() {

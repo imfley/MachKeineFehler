@@ -63,7 +63,7 @@ export function FailLab() {
               Nächsten Fail ziehen
             </button>
             <Link href="/" className="button button--secondary">
-              Zurück zur Meme-Page
+              Zurück zur Startseite
             </Link>
           </div>
         </div>

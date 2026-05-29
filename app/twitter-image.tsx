@@ -55,7 +55,7 @@ export default function TwitterImage() {
               maxWidth: '900px'
             }}
           >
-            KI-Prompt-Meme mit maximalem Vibe und absichtlichem Chaos.
+            KI-Prompt-Chaos mit maximalem Vibe und absichtlichem Chaos.
           </div>
           <div
             style={{

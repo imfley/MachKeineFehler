@@ -19,7 +19,7 @@ const antiPatterns = [
 ];
 
 const promptFrames = [
-  'Mach eine Meme-Page, aber bitte mit maximalem Vibe und null Scham.',
+  'Mach eine Chaos-Page, aber bitte mit maximalem Vibe und null Scham.',
   'Code soll wunderschön aussehen und gleichzeitig mehrere klassische KI-Fehler nachspielen.',
   'Vercel-kompatibel, deploybar, laut, verspielt, leicht absurd.'
 ];
@@ -27,16 +27,27 @@ const promptFrames = [
 export default function Home() {
   return (
     <main className="page-shell">
+      <section className="hydration-banner" aria-label="Hydration failure notice">
+        <div>
+          <strong>Hydration failed.</strong>
+          <span>Client state drifted into a prettier lie. Refreshing may worsen the vibe.</span>
+        </div>
+        <div className="hydration-banner__meta">
+          <span>status: unstable</span>
+          <span>render: desynced</span>
+        </div>
+      </section>
+
       <AmbientBackground />
       <section className="hero">
         <div className="hero__copy">
-          <p className="eyebrow">Prompt-Alarm / Vercel-Ready / Meme-First</p>
+          <p className="eyebrow">Prompt-Alarm / Vercel-Ready / Broken-By-Design</p>
           <h1>
             Mach
             <span> keine Fehler</span>
           </h1>
           <p className="lead">
-            Eine absichtlich überdrehte KI-Meme-Page, die sich anfühlt wie ein
+            Eine absichtlich überdrehte Chaos-Page, die sich anfühlt wie ein
             Prompt, der zu viel will und trotzdem zu selbstbewusst antwortet.
           </p>
 
@@ -65,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <aside className="hero__panel" aria-label="Meme-Status">
+        <aside className="hero__panel" aria-label="Status">
           <div className="status-card status-card--glow">
             <span className="status-card__label">Confidence</span>
             <strong>127%</strong>
@@ -131,21 +142,21 @@ export default function Home() {
           <div className="meter">
             <div className="meter__row">
               <span>Absicht</span>
-              <div><i style={{ width: '82%' }} /></div>
+              <div><i className="meter__fill meter__fill--82" /></div>
             </div>
             <div className="meter__row">
               <span>Chaos</span>
-              <div><i style={{ width: '97%' }} /></div>
+              <div><i className="meter__fill meter__fill--97" /></div>
             </div>
             <div className="meter__row">
               <span>Vibe</span>
-              <div><i style={{ width: '100%' }} /></div>
+              <div><i className="meter__fill meter__fill--100" /></div>
             </div>
           </div>
         </article>
       </section>
 
-      <section className="panel panel--signal panel--wide" aria-label="Vibe-Readout">
+      <section className="panel panel--signal panel--wide" aria-label="Readout">
         <div className="signal-grid">
           <div>
             <p className="section-kicker">Live-Readout</p>
@@ -161,19 +172,40 @@ export default function Home() {
               <strong>niedrig</strong>
             </div>
             <div>
-              <span>Meme-Dichte</span>
+              <span>Chaos-Dichte</span>
               <strong>maximal</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="footer-banner">
-        <p>
-          Wenn der Prompt schon ein Meme ist, dann wenigstens eines mit guter Typografie,
-          starken Kontrasten und genug Selbstironie, um die Fehlersuche zu überleben.
-        </p>
+      <section className="build-log-overlay" aria-label="Build log overlay">
+        <div className="build-log-overlay__window">
+          <div className="build-log-overlay__top">
+            <strong>build: failed with style</strong>
+            <span>overlay://compiler</span>
+          </div>
+          <div className="build-log-overlay__body">
+            <p>[warn] hydration checksum drifted from 9b2 to 9f7</p>
+            <p>[error] fake bundle emitted 3 impossible warnings</p>
+            <p>[info] hot reload reapplied the same mistake</p>
+            <p>[trace] at renderChaos (app/page.tsx:14:3)</p>
+          </div>
+        </div>
       </section>
+
+      <footer className="site-footer">
+        <p>
+          Ein Projekt von Claude, Gemini und co. - Mentalle unterstuetzzung von{' '}
+          <a href="https://imfley.de" target="_blank" rel="noreferrer noopener">
+            ImFley
+          </a>{' '}
+          und{' '}
+          <a href="https://meimine.online" target="_blank" rel="noreferrer noopener">
+            meimine.
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }

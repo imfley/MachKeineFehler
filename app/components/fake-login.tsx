@@ -122,7 +122,7 @@ export function FakeLogin() {
           </h1>
           <p className="lead">
             Eine absichtlich peinliche Login-Seite, die bei falscher Eingabe nur randomisierte, fiktionale Demo-Daten ausgibt.
-            Keine echten Accounts, kein echtes Leck, nur maximaler Meme-Overkill.
+            Keine echten Accounts, kein echtes Leck, nur maximaler Chaos-Overkill.
           </p>
           <div className="hero__actions">
             <button type="button" className="button button--secondary" onClick={resetForm}>

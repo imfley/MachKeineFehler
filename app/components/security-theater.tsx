@@ -152,7 +152,7 @@ export function SecurityTheater() {
               Demo neu mischen
             </button>
             <a href="/" className="button button--secondary">
-              Zurück zur Meme-Page
+              Zurück zur Startseite
             </a>
           </div>
         </div>

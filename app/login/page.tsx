@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { FakeLogin } from '../components/fake-login';
+import { AuthChaos } from '../components/auth-chaos';
 
 export const metadata: Metadata = {
-  title: 'Fake Login',
-  description: 'Eine absichtlich schlechte Demo-Login-Seite, die nur fiktionale Testdaten anzeigt.'
+  title: 'Login / Register',
+  description: 'Eine absichtlich schlechte Login- und Register-Seite mit randomisierten Bildern und rein fiktionaler UI.'
 };
 
 export default function LoginPage() {
-  return <FakeLogin />;
+  return <AuthChaos />;
 }

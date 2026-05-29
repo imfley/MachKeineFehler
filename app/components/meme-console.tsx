@@ -8,7 +8,7 @@ type Feedback = {
 };
 
 const promptVariants = [
-  'Baue eine Meme-Landingpage, die bewusst wie ein KI-Fail aussieht, aber elegant bleibt.',
+  'Baue eine Chaos-Landingpage, die bewusst wie ein KI-Fail aussieht, aber elegant bleibt.',
   'Erzeuge maximalen Vibe, harte Kontraste und eine leichte Krise in der Typografie.',
   'Schreibe so, als ob der Prompt mit 12 Tabs, drei Emotionen und null Geduld geliefert wurde.'
 ];
@@ -98,7 +98,7 @@ export function MemeConsole() {
   }
 
   return (
-    <section className="console panel panel--console" aria-label="Interaktives Meme-Console">
+    <section className="console panel panel--console" aria-label="Interaktive Konsole">
       <div className="console__top">
         <div>
           <p className="section-kicker">Live-Prompt-Console</p>
